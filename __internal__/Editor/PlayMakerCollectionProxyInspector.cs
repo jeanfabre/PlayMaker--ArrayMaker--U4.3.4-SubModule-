@@ -481,7 +481,29 @@ public class PlayMakerCollectionProxyInspector : Editor {
 							EditorGUILayout.EndHorizontal();
 						}
 						break;
-				
+					case (PlayMakerCollectionProxy.VariableEnum.Byte):
+						for(int i=0;i<proxy.preFillCount;i++){
+							if (proxy.preFillByteList.Count<(i+1)){
+								proxy.preFillByteList.Add(0);
+							}
+							EditorGUILayout.BeginHorizontal();
+							buildItemSelector(i);
+							if( proxy.condensedView && withKeys){
+								
+								buildKeyField(proxy,i);
+								proxy.preFillIntList[i]= (byte)EditorGUILayout.IntField((int)proxy.preFillByteList[i]);
+								
+							}else{
+								if (withKeys) {
+									buildKeyField(proxy,i);
+									EditorGUILayout.EndHorizontal();
+									EditorGUILayout.BeginHorizontal();
+								}
+							proxy.preFillByteList[i]= (byte)EditorGUILayout.IntField("Item "+i, (int)proxy.preFillByteList[i]);
+							}
+							EditorGUILayout.EndHorizontal();
+						}
+						break;
 					default:
 						//ERROR
 						break;

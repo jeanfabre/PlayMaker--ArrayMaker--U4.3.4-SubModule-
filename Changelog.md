@@ -1,5 +1,9 @@
 #ArrayMaker Change log
 
+### 1.0.4  
+**New**  
+- Support for "byte" value
+
 ### 1.0.3
 **New**  
 - New ArrayListActivateGameObjects

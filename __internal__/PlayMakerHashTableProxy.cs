@@ -158,6 +158,9 @@ public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
 				case (VariableEnum.AudioClip):
 					hashTable[preFillKeyList[i]] = preFillAudioClipList[i];		
 					break;
+				case (VariableEnum.Byte):
+					hashTable[preFillKeyList[i]] = preFillByteList[i];		
+					break;
 				default:
 					break;
 			}

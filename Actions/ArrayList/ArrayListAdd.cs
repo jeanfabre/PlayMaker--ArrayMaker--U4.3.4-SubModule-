@@ -32,10 +32,15 @@ namespace HutongGames.PlayMaker.Actions
 		[Tooltip("The variable to add.")]
 		public FsmVar variable;
 
+		[Tooltip("Ints can be stored as bytes, useful when serializing over network for efficiency")]
+		public bool convertIntToByte;
+
 		[ActionSection("Result")]
 		[UIHint(UIHint.Variable)]
 		[Tooltip("The index it was added at")]
 		public FsmInt index;
+
+
 		
 		
 		
@@ -44,6 +49,7 @@ namespace HutongGames.PlayMaker.Actions
 			gameObject = null;
 			reference = null;
 			variable = null;
+			convertIntToByte = false;
 			index = null;
 		}
 		
@@ -61,8 +67,15 @@ namespace HutongGames.PlayMaker.Actions
 		{
 			if (! isProxyValid() ) 
 				return;
-			
-			proxy.Add(PlayMakerUtils.GetValueFromFsmVar(Fsm,variable),variable.Type.ToString());
+
+			var _value = PlayMakerUtils.GetValueFromFsmVar(Fsm,variable);
+
+			if (variable.Type == VariableType.Int && convertIntToByte)
+			{
+				proxy.Add(System.Convert.ToByte(_value),variable.Type.ToString());
+			}else{
+				proxy.Add(_value,variable.Type.ToString());
+			}
 
 			index.Value = proxy.arrayList.Count -1;
 		}

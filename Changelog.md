@@ -1,8 +1,13 @@
 #ArrayMaker Change log
 
+### 1.1.0  
+**New**  
+- Refactored Github Repositories, using now submodule  
+- Moved thirdParty code and samples in respective folders ( for clarity and to be compatible with submodule)  
+
 ### 1.0.4  
 **New**  
-- Support for "byte" value
+- Support for "byte" value  
 
 ### 1.0.3
 **New**  

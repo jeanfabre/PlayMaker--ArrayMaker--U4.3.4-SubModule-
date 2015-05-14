@@ -48,7 +48,7 @@ namespace HutongGames.PlayMaker.Actions
 			gameObject = null;
 			reference = null;
 			variable = null;
-			forceResizeIdNeeded = true;
+			forceResizeIdNeeded = false;
 			everyFrame = false;
 		}
 		
@@ -76,7 +76,7 @@ namespace HutongGames.PlayMaker.Actions
 			if (proxy._arrayList.Count<=atIndex.Value && forceResizeIdNeeded)
 			{
 
-				while(proxy._arrayList.Count<=atIndex.Value)
+				while(proxy._arrayList.Count <= atIndex.Value)
 				{
 					proxy._arrayList.Add(null);
 				}

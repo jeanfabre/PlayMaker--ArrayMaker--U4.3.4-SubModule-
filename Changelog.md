@@ -1,5 +1,10 @@
 #ArrayMaker Change log
 
+###1.1.2
+**Fix**  
+- Removed uncessary debug logs in actions  
+
+
 ###1.1.1
 **Improvement**  
 - Included Unity 5 refactored changes, so now the package opens as is in Unity 5 without any additional steps  

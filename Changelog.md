@@ -1,9 +1,12 @@
 #ArrayMaker Change log
 
+###1.1.3
+**New**  
+- Support for Sprite assets  
+
 ###1.1.2
 **Fix**  
 - Removed uncessary debug logs in actions  
-
 
 ###1.1.1
 **Improvement**  

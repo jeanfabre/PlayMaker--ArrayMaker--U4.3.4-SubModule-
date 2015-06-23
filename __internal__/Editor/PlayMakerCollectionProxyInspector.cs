@@ -504,6 +504,32 @@ public class PlayMakerCollectionProxyInspector : Editor {
 							EditorGUILayout.EndHorizontal();
 						}
 						break;
+					case (PlayMakerCollectionProxy.VariableEnum.Sprite):
+						for(int i=0;i<proxy.preFillCount;i++){
+							if (proxy.preFillSpriteList.Count<(i+1)){
+						proxy.preFillSpriteList.Add(null);
+							}
+							EditorGUILayout.BeginHorizontal();
+							buildItemSelector(i);
+							if( proxy.condensedView && withKeys){
+								
+								buildKeyField(proxy,i);
+							proxy.preFillSpriteList[i]= (Sprite)EditorGUILayout.ObjectField(proxy.preFillSpriteList[i],typeof(Sprite),false);
+
+								
+								
+							}else{
+								if (withKeys) {
+									buildKeyField(proxy,i);
+									EditorGUILayout.EndHorizontal();
+									EditorGUILayout.BeginHorizontal();
+								}
+							proxy.preFillSpriteList[i]= (Sprite)EditorGUILayout.ObjectField("Item "+i, proxy.preFillSpriteList[i],typeof(Sprite),false);
+
+							}
+							EditorGUILayout.EndHorizontal();
+						}
+						break;
 					default:
 						//ERROR
 						break;

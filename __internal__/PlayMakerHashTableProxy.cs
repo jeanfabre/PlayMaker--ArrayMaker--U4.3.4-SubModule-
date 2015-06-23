@@ -161,6 +161,9 @@ public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
 				case (VariableEnum.Byte):
 					hashTable[preFillKeyList[i]] = preFillByteList[i];		
 					break;
+				case (VariableEnum.Sprite):
+					hashTable[preFillKeyList[i]] = preFillSpriteList[i];		
+				break;
 				default:
 					break;
 			}

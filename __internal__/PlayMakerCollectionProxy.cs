@@ -25,7 +25,8 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 		Texture,
 		Vector2,
 		AudioClip,
-		Byte
+		Byte,
+		Sprite
 	}
 		
 	//- EDITING STUFF
@@ -78,6 +79,7 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 	public List<Vector3> preFillVector3List = new List<Vector3>();
 	public List<AudioClip> preFillAudioClipList = new List<AudioClip>();
 	public List<byte> preFillByteList = new List<byte>();
+	public List<Sprite> preFillSpriteList = new List<Sprite>();
 
 	internal string getFsmVariableType(VariableType _type)
 	{
@@ -207,6 +209,9 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 		}
 		if (preFillByteList.Count>preFillCount){
 			preFillByteList.RemoveRange(preFillCount,(preFillByteList.Count-preFillCount));	
+		}
+		if (preFillSpriteList.Count>preFillCount){
+			preFillSpriteList.RemoveRange(preFillCount,(preFillSpriteList.Count-preFillCount));	
 		}
 		
 	}// cleanPrefilledLists

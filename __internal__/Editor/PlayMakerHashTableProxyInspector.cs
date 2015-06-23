@@ -140,6 +140,8 @@ public class PlayMakerHashTableProxyInspector : PlayMakerCollectionProxyInspecto
 					}else if (proxy.hashTable[keysList[i]].GetType() == typeof(byte)) {
 						int _val = System.Convert.ToInt32(proxy.hashTable[keysList[i]]);
 						proxy.hashTable[keysList[i]]= (byte)EditorGUILayout.IntField(label,_val );
+					}else if (proxy.hashTable[keysList[i]].GetType() == typeof(Sprite)) {
+						proxy.hashTable[keysList[i]]= (Sprite)EditorGUILayout.ObjectField(label, (Sprite)proxy.hashTable[keysList[i]],typeof(Sprite),true);
 					}else{
 						// OUPS
 						Debug.Log(proxy.hashTable[keysList[i]].GetType());

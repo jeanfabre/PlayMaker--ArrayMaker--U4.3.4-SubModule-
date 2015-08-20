@@ -6,6 +6,7 @@
 // In this Action interface, link that GameObject in "arrayListObject" and input the reference name if defined. 
 // Note: You can directly reference that GameObject or store it in an Fsm variable or global Fsm variable
 
+
 using UnityEngine;
 using System.Collections;
 
@@ -67,7 +68,7 @@ namespace HutongGames.PlayMaker.Actions
 				{
 					proxy.Add(System.Convert.ToByte(_value),_var.Type.ToString(),true);
 				}else{
-					proxy.Add(_var,_var.Type.ToString(),true);
+					proxy.Add(_value,_var.Type.ToString(),true);
 				}
 
 			}

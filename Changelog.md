@@ -1,5 +1,10 @@
 #ArrayMaker Change log
 
+###1.1.4
+**Fix**  
+- Fixed `ArrayListAddRange` to save value properly  
+
+
 ###1.1.3
 **New**  
 - Support for Sprite assets  
@@ -138,3 +143,4 @@ This version is a huge improvment in terms of ease of use, with now much more co
 ###0.6.0  
 **Note:**  
 - Initial Public Release
+

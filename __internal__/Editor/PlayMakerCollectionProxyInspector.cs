@@ -39,8 +39,10 @@ public class PlayMakerCollectionProxyInspector : Editor {
 		
 	}// BuildPreviewInspectorHeaderGUI
 	
-	
-	
+	bool PrefillEditing;
+
+	int _tempPrefillEditValue;
+
 	protected void BuildPreFillInspectorGUI(bool withKeys)
 	{
 		PlayMakerCollectionProxy proxy = (PlayMakerCollectionProxy)target;
@@ -64,10 +66,50 @@ public class PlayMakerCollectionProxyInspector : Editor {
 
 			EditorGUI.indentLevel = 1;
 			
-			proxy.preFillType =  (PlayMakerHashTableProxy.VariableEnum)EditorGUILayout.EnumPopup("Prefill type", proxy.preFillType);               
-			int newPrefillCount  = Mathf.Max(0,EditorGUILayout.IntField("Prefill count",proxy.preFillCount));
+			proxy.preFillType =  (PlayMakerHashTableProxy.VariableEnum)EditorGUILayout.EnumPopup("Prefill type", proxy.preFillType);
+
+			int _prefillValue = proxy.preFillCount;
+			if (PrefillEditing)
+			{
+				_prefillValue = _tempPrefillEditValue;
+			}
+
+			bool _saveEdit = false;
+
+			GUILayout.BeginHorizontal();
+			int newPrefillCount  = Mathf.Max(0,EditorGUILayout.IntField("Prefill count",_prefillValue));
+
 			if (proxy.preFillCount != newPrefillCount)
 			{
+				_tempPrefillEditValue = newPrefillCount;
+
+				if (!PrefillEditing) PrefillEditing = true;
+
+				if (PrefillEditing)
+				{
+					if (GUILayout.Button("Save","MiniButton",GUILayout.Width(40)))
+					{
+						_saveEdit = true;
+						GUI.SetNextControlName("");
+						GUI.FocusControl("");
+					}
+					if (GUILayout.Button("Cancel","MiniButton",GUILayout.Width(40)))
+					{
+						PrefillEditing = false;
+						_tempPrefillEditValue = proxy.preFillCount;
+						_saveEdit = false;
+						GUI.SetNextControlName("");
+						GUI.FocusControl("");
+					}
+				}
+			}
+			GUILayout.EndHorizontal();
+
+			if (_saveEdit && proxy.preFillCount != newPrefillCount)
+			{
+				PrefillEditing = false;
+				_saveEdit = false;
+
 				//Debug.Log("new prefill count");
 				proxy.preFillCount = newPrefillCount;
 			 	proxy.cleanPrefilledLists();

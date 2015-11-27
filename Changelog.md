@@ -3,10 +3,11 @@
 ###1.1.5
 **New**  
 - `ArrayListSortGameObjectByDistance`
+- Prefill count is now subject to save and cancelation to prevent deletion of all data when editing the field  
 
 **Fix**  
 - Fixed `ArrayListCount` to force useVariable for count property  
-- - Fixed `ArrayListGetPrevious` to not skip the last item (index 0)
+- Fixed `ArrayListGetPrevious` to not skip the last item (index 0)
 
 ###1.1.4
 **Fix**  

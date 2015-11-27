@@ -1,9 +1,16 @@
 #ArrayMaker Change log
 
+###1.1.5
+**New**  
+- `ArrayListSortGameObjectByDistance`
+
+**Fix**  
+- Fixed `ArrayListCount` to force useVariable for count property  
+- - Fixed `ArrayListGetPrevious` to not skip the last item (index 0)
+
 ###1.1.4
 **Fix**  
 - Fixed `ArrayListAddRange` to save value properly  
-
 
 ###1.1.3
 **New**  

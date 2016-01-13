@@ -1,5 +1,8 @@
 #ArrayMaker Change log
 
+###1.1.5 Build 2
+**Update:** `PlayMaker Utils` update for Compatibility with Unity 4.7  
+
 ###1.1.5 Build 1
 **Update:** `PlayMaker Utils` update for Compatibility with 1.8  
 

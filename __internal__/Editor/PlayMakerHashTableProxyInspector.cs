@@ -147,10 +147,11 @@ public class PlayMakerHashTableProxyInspector : PlayMakerCollectionProxyInspecto
 						Debug.Log(proxy.hashTable[keysList[i]].GetType());
 						//	EditorGUILayout.TextField(label, (string)proxy.hashTable[keysList[i]]);
 					}
+					EditorGUILayout.EndHorizontal();
 				}else{
 					EditorGUILayout.LabelField(label,"-- NULL --");
 				}
-				EditorGUILayout.EndHorizontal();
+
 				if (Application.isPlaying &&  GUI.changed){
 					proxy.InspectorEdit(i);
 				}

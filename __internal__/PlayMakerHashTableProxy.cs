@@ -60,10 +60,12 @@
 //   If several PlayMakerHashTable coexists on a given GameObject, then it becomes necessary to properly provide unique references for stable and predictable behavior.
 
 
-
+using UnityEngine;
 using HutongGames.PlayMaker;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 
 public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
@@ -113,7 +115,119 @@ public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
 		dispatchEvent(setEvent,index,"int");
 	}
 	
+	[ContextMenu ("Copy content back to prefill")]
+	private void CopyContentToPrefill()
+	{
+
+		this.preFillCount = hashTable.Count;
+
+		preFillKeyList =  hashTable.Keys.OfType<string>().ToList();
 	
+		switch (this.preFillType) {
+			
+		case (VariableEnum.Bool):
+			preFillBoolList = new List<bool>(new  bool[this.preFillCount]);
+			break;
+		case (VariableEnum.Color):
+			preFillColorList = new List<Color>(new Color[this.preFillCount]);
+			break;
+		case (VariableEnum.Float):
+			preFillFloatList= new List<float>(new float[this.preFillCount]);
+			break;
+		case (VariableEnum.GameObject):
+			preFillGameObjectList = new List<GameObject>(new GameObject[this.preFillCount]);
+			break;
+		case (VariableEnum.Int):
+			preFillIntList = new List<int>(new int[this.preFillCount]);
+			break;
+		case (VariableEnum.Material):
+			preFillMaterialList = new List<Material>(this.preFillCount);
+			break;
+		case (VariableEnum.Quaternion):
+			preFillQuaternionList = new List<Quaternion>(this.preFillCount);
+			break;
+		case (VariableEnum.Rect):
+			preFillRectList	= new List<Rect>(this.preFillCount);
+			break;
+		case (VariableEnum.String):
+			preFillStringList = new List<string>(new string[this.preFillCount]);  
+			break;
+		case (VariableEnum.Texture):
+			preFillTextureList = new List<Texture2D>(this.preFillCount);
+			break;
+		case (VariableEnum.Vector2):
+			preFillVector2List = new List<Vector2>(this.preFillCount);
+			break;
+		case (VariableEnum.Vector3):
+			preFillVector3List = new List<Vector3>(new Vector3[this.preFillCount]);
+			break;
+		case (VariableEnum.AudioClip):
+			preFillAudioClipList = new List<AudioClip>(this.preFillCount);
+			break;
+		case (VariableEnum.Byte):
+			preFillByteList = new List<byte>(this.preFillCount);
+			break;
+		case (VariableEnum.Sprite):
+			preFillSpriteList = new List<Sprite>(this.preFillCount);
+			break;
+		default:
+			break;
+		}
+
+
+		for(int i=0;i<preFillKeyList.Count;i++)
+		{
+			switch (preFillType) {
+			case (VariableEnum.Bool):
+				preFillBoolList[i] = Convert.ToBoolean(hashTable[preFillKeyList[i]]);
+				break;
+			case (VariableEnum.Color):
+				preFillColorList[i] =  PlayMakerUtils.ConvertToColor(hashTable[preFillKeyList[i]]);	
+				break;
+			case (VariableEnum.Float):
+				preFillFloatList[i] = Convert.ToSingle(hashTable[preFillKeyList[i]]);
+				break;
+			case (VariableEnum.GameObject):
+				preFillGameObjectList[i] = hashTable[preFillKeyList[i]] as GameObject;
+				break;
+			case (VariableEnum.Int):
+				preFillIntList[i] = Convert.ToInt32(hashTable[preFillKeyList[i]]);	
+				break;
+			case (VariableEnum.Material):
+				preFillMaterialList[i] = hashTable[preFillKeyList[i]] as Material;
+				break;
+			case (VariableEnum.Quaternion):
+				preFillQuaternionList[i] = PlayMakerUtils.ConvertToQuaternion(hashTable[preFillKeyList[i]]);
+				break;
+			case (VariableEnum.Rect):
+				preFillRectList[i] = PlayMakerUtils.ConvertToRect(hashTable[preFillKeyList[i]]);	
+				break;
+			case (VariableEnum.String):
+				preFillStringList[i] = Convert.ToString(hashTable[preFillKeyList[i]]);	
+				break;
+			case (VariableEnum.Texture):
+				preFillTextureList[i] = hashTable[preFillKeyList[i]] as Texture2D;	
+				break;
+			case (VariableEnum.Vector2):
+				preFillVector2List[i] = (Vector2)hashTable[preFillKeyList[i]];		
+				break;
+			case (VariableEnum.Vector3):
+				preFillVector3List[i] = PlayMakerUtils.ConvertToVector3(hashTable[preFillKeyList[i]]);		
+				break;
+			case (VariableEnum.AudioClip):
+				preFillAudioClipList[i] = hashTable[preFillKeyList[i]] as AudioClip;		
+				break;
+			case (VariableEnum.Byte):
+				preFillByteList[i] = Convert.ToByte(hashTable[preFillKeyList[i]]);		
+				break;
+			case (VariableEnum.Sprite):
+				preFillSpriteList[i] = hashTable[preFillKeyList[i]]  as Sprite;		
+				break;
+			default:
+				break;
+			}
+		}
+	}
 	private void PreFillHashTable()
 	{
 		for(int i=0;i<preFillKeyList.Count;i++)

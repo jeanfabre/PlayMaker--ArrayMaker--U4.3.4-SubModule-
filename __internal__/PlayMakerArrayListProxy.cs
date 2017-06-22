@@ -86,6 +86,7 @@ using UnityEngine;
 using HutongGames.PlayMaker;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 
 
@@ -177,6 +178,63 @@ public class PlayMakerArrayListProxy : PlayMakerCollectionProxy {
 		}
 		
 		return false;
+	}
+
+	[ContextMenu ("Copy content back to prefill")]
+	void CopyContentToPrefill () {
+		
+		this.preFillCount = arrayList.Count;
+
+		switch (preFillType) {
+
+		case (VariableEnum.Bool):
+			preFillBoolList = arrayList.OfType<bool>().ToList();
+			break;
+		case (VariableEnum.Color):
+			preFillColorList = arrayList.OfType<Color>().ToList();
+			break;
+		case (VariableEnum.Float):
+			preFillFloatList= arrayList.OfType<float>().ToList();
+			break;
+		case (VariableEnum.GameObject):
+			preFillGameObjectList = arrayList.OfType<GameObject>().ToList();
+			break;
+		case (VariableEnum.Int):
+			preFillIntList = arrayList.OfType<int>().ToList();
+			break;
+		case (VariableEnum.Material):
+			preFillMaterialList = arrayList.OfType<Material>().ToList();
+			break;
+		case (VariableEnum.Quaternion):
+			preFillQuaternionList = arrayList.OfType<Quaternion>().ToList();
+			break;
+		case (VariableEnum.Rect):
+			preFillRectList	= arrayList.OfType<Rect>().ToList();
+			break;
+		case (VariableEnum.String):
+			preFillStringList = arrayList.OfType<string>().ToList();
+			break;
+		case (VariableEnum.Texture):
+			preFillTextureList = arrayList.OfType<Texture2D>().ToList();
+			break;
+		case (VariableEnum.Vector2):
+			preFillVector2List = arrayList.OfType<Vector2>().ToList();		
+			break;
+		case (VariableEnum.Vector3):
+			preFillVector3List = arrayList.OfType<Vector3>().ToList();
+			break;
+		case (VariableEnum.AudioClip):
+			preFillAudioClipList = arrayList.OfType<AudioClip>().ToList();	
+			break;
+		case (VariableEnum.Byte):
+			preFillByteList = arrayList.OfType<byte>().ToList();	
+			break;
+		case (VariableEnum.Sprite):
+			preFillSpriteList = arrayList.OfType<Sprite>().ToList();	
+			break;
+		default:
+			break;
+		}
 	}
 
 	

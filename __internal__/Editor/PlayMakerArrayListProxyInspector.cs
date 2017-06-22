@@ -25,7 +25,7 @@ public class PlayMakerArrayListProxyInspector : PlayMakerCollectionProxyInspecto
 		PlayMakerArrayListProxy proxy = (PlayMakerArrayListProxy)target;
 		proxy.cleanPrefilledLists();
 	}
-	
+
 	public override void OnInspectorGUI()
 	{
 		PlayMakerArrayListProxy proxy = (PlayMakerArrayListProxy)target;

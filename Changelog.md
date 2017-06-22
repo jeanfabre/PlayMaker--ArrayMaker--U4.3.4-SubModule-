@@ -1,7 +1,10 @@
 #ArrayMaker Change log
 
+
 ###1.1.6
-**Fix:** Hashtable Inspector when element is null
+**Release Date:** 22/06/2017  
+
+**New:** arrayList and hashtable data can now be copied from runtime back to edit time 
 
 ###1.1.5 Build 2
 **Update:** `PlayMaker Utils` update for Compatibility with Unity 4.7  

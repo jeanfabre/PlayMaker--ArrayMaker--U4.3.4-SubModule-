@@ -45,9 +45,14 @@ namespace HutongGames.PlayMaker.Actions
 		[Tooltip("Event sent if this arraList does not contains that element ( described below)")]
 		[UIHint(UIHint.FsmEvent)]
 		public FsmEvent isNotContainedEvent;
-		
-		
-		public override void Reset()
+
+        [Tooltip("Get The Index Result from the variable")]
+        [UIHint(UIHint.Variable)]
+        public FsmInt indexResult;
+
+
+
+        public override void Reset()
 		{
 			gameObject = null;
 			reference = null;
@@ -82,51 +87,64 @@ namespace HutongGames.PlayMaker.Actions
 			switch (variable.Type){
 				case (VariableType.Bool):
 					elementContained = proxy.arrayList.Contains(variable.boolValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.boolValue);
+                    break;
 				case (VariableType.Color):
 					elementContained = proxy.arrayList.Contains(variable.colorValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.colorValue);
+                    break;
 				case (VariableType.Float):
 					elementContained = proxy.arrayList.Contains(variable.floatValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.floatValue);
+                    break;
 				case (VariableType.GameObject):
 					elementContained = proxy.arrayList.Contains(variable.gameObjectValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.gameObjectValue);
+                    break;
 				case (VariableType.Int):
 					elementContained = proxy.arrayList.Contains(variable.intValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.intValue);
+                    break;
 				case (VariableType.Material):
 					elementContained = proxy.arrayList.Contains(variable.materialValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.materialValue);
+                    break;
 				case (VariableType.Object):
 					elementContained = proxy.arrayList.Contains(variable.objectReference);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.objectReference);
+                    break;
 				case (VariableType.Quaternion):
 					elementContained = proxy.arrayList.Contains(variable.quaternionValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.quaternionValue);
+                    break;
 				case (VariableType.Rect):
 					elementContained = proxy.arrayList.Contains(variable.rectValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.rectValue);
+                    break;
 				case (VariableType.String):
 					elementContained = proxy.arrayList.Contains(variable.stringValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.stringValue);
+                    break;
 				case (VariableType.Texture):
 					elementContained = proxy.arrayList.Contains(variable.textureValue);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.textureValue);
+                    break;
 				case (VariableType.Vector3):
 					elementContained = proxy.arrayList.Contains(variable.vector3Value);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.vector3Value);
+                    break;
 					case (VariableType.Vector2):
 					elementContained = proxy.arrayList.Contains(variable.vector2Value);
-					break;
+                    indexResult.Value = proxy.arrayList.IndexOf(variable.vector2Value);
+                    break;
 				default:
 					//ERROR
 					break;
-			}
-			
-			
-			//UnityEngine.Debug.Log(elementContained.ToString());
-			isContained.Value = elementContained;
+            }
+
+
+            //UnityEngine.Debug.Log(elementContained.ToString());
+            isContained.Value = elementContained;
 			if(elementContained){
 				Fsm.Event(isContainedEvent);
 			}else{

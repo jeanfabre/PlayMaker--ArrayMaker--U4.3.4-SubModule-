@@ -87,7 +87,7 @@ namespace HutongGames.PlayMaker.Actions
 			switch (variable.Type){
 				case (VariableType.Bool):
 					elementContained = proxy.arrayList.Contains(variable.boolValue);
-                    indexResult.Value = proxy.arrayList.IndexOf(variable.boolValue);
+                 	indexResult.Value = proxy.arrayList.IndexOf(variable.boolValue);
                     break;
 				case (VariableType.Color):
 					elementContained = proxy.arrayList.Contains(variable.colorValue);

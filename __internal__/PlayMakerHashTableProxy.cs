@@ -115,7 +115,7 @@ public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
 		dispatchEvent(setEvent,index,"int");
 	}
 	
-	[ContextMenu ("Copy content back to prefill")]
+	[ContextMenu ("Copy HashTable Content")]
 	private void CopyContentToPrefill()
 	{
 
@@ -227,6 +227,12 @@ public class PlayMakerHashTableProxy : PlayMakerCollectionProxy {
 				break;
 			}
 		}
+
+		
+		#if UNITY_EDITOR
+		UnityEditor.Unsupported.CopyComponentToPasteboard(this);
+		#endif 
+
 	}
 	private void PreFillHashTable()
 	{

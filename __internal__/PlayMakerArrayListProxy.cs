@@ -180,7 +180,7 @@ public class PlayMakerArrayListProxy : PlayMakerCollectionProxy {
 		return false;
 	}
 
-	[ContextMenu ("Copy content back to prefill")]
+	[ContextMenu ("Copy ArrayList Content")]
 	void CopyContentToPrefill () {
 		
 		this.preFillCount = arrayList.Count;
@@ -235,6 +235,11 @@ public class PlayMakerArrayListProxy : PlayMakerCollectionProxy {
 		default:
 			break;
 		}
+
+		#if UNITY_EDITOR
+		UnityEditor.Unsupported.CopyComponentToPasteboard(this);
+		#endif 
+
 	}
 
 	

@@ -215,6 +215,58 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 		}
 		
 	}// cleanPrefilledLists
+
+
+	public static VariableEnum GetObjectVariableType(object value)
+	{
+
+		if (value is Vector3)
+			return VariableEnum.Vector3;
+
+		if (value is Rect)
+			return VariableEnum.Rect;
+
+		if (value is Quaternion)
+			return VariableEnum.Quaternion;
 	
+		if (value is Material)
+			return VariableEnum.Material;
+
+		if (value is Texture)
+			return VariableEnum.Texture;
+
+		if (value is Vector2)
+			return VariableEnum.Vector2;
+	
+		if (value is Sprite)
+			return VariableEnum.Sprite;
+
+		if (value is AudioClip)
+			return VariableEnum.AudioClip;
+	
+		if (value is bool)
+			return VariableEnum.Bool;
+
+		if (value is byte)
+			return VariableEnum.Byte;
+
+		if (value is Color)
+			return VariableEnum.Color;
+
+		if (value is GameObject)
+			return VariableEnum.GameObject;
+
+		if (value is float)
+			return VariableEnum.Float;
+
+		if (value is int)
+			return VariableEnum.Int;
+
+		if (value is string)
+			return VariableEnum.String;
+
+		return VariableEnum.GameObject;
+	}
+
 	
 }

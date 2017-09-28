@@ -1,10 +1,20 @@
 #ArrayMaker Change log
 
+###1.1.7
+**Release Date:** 28/09/2017  
+
+**New:** new action `ArrayListGetAllChildOfGameObject`   
+
+**Update:** `ArrayListContains` now lets you store the index 
+
+**Update:** `PlayMaker Utils` update  
 
 ###1.1.6
 **Release Date:** 22/06/2017  
 
 **New:** arrayList and hashtable data can now be copied from runtime back to edit time 
+
+**New:** `arrayListGetType` and `HashtableGetType` to know the type of an element  
 
 ###1.1.5 Build 2
 **Update:** `PlayMaker Utils` update for Compatibility with Unity 4.7  

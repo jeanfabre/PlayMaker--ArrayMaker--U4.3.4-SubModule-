@@ -14,6 +14,7 @@ using System.Collections.Generic;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory("ArrayMaker/HashTable")]
+	[Tooltip("Get a Random key and related value from an hashtable.")]
 	public class HashTableGetRandom : HashTableActions
 	{
 		[ActionSection("Set up")]

@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.1.8
+**Release Date:** 17/10/2017  
+
+**Documentation:** `HashtableGetRandom` tooltip fixed 
+
+
 ###1.1.7
 **Release Date:** 28/09/2017  
 

@@ -65,9 +65,7 @@ namespace HutongGames.PlayMaker.Actions
 			childs = parent.GetComponentsInChildren<Transform>(includeInactive.Value);
 
 			proxy.arrayList.Clear();
-			
-			int value = 0;
-			
+
 			foreach(Transform trans in childs) {
 				if ( !includeParent.Value && trans.gameObject == parent)
 				{

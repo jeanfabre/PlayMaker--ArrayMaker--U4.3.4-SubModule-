@@ -73,9 +73,7 @@ namespace HutongGames.PlayMaker.Actions
 				Fsm.Event(failureEvent);
 				return;
 			}
-			
-			object element = null;
-			
+
 			try{
 
 				if (proxy.arrayList[atIndex.Value] == null)

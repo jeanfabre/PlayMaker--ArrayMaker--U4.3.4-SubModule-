@@ -61,12 +61,12 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter()
 		{
 			if ( SetUpHashTableProxyPointer(Fsm.GetOwnerDefaultTarget(gameObject),reference.Value) )
-				GetType();
+				DoGetType();
 
 			Finish();
 		}
 		
-		public void GetType(){
+		public void DoGetType(){
 			
 			if (! isProxyValid())
 			{

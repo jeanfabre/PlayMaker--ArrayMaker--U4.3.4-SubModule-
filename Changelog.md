@@ -1,5 +1,13 @@
 #ArrayMaker Change log
 
+###1.1.9
+**Release Date:** 23/10/2017  
+
+**Fix** 
+- Fixed `HashTableGetType` warning
+- Fixed unused variable in `ArrayListGetType` and `ArrayListGetAllChildOfGameObject`
+
+
 ###1.1.8
 **Release Date:** 17/10/2017  
 

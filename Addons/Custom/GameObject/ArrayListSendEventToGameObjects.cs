@@ -15,9 +15,7 @@ namespace HutongGames.PlayMaker.Actions
 	public class ArrayListSendEventToGameObjects : ArrayListActions
 	{
 		[ActionSection("Set up")]
-		
-		public FsmEventTarget eventTarget;
-		
+
 		[RequiredField]
 		[Tooltip("The gameObject with the PlayMaker ArrayList Proxy component")]
 		[CheckForComponent(typeof(PlayMakerArrayListProxy))]
@@ -38,10 +36,6 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public override void Reset()
 		{
-			eventTarget = new FsmEventTarget();
-				
-			eventTarget.target = FsmEventTarget.EventTarget.BroadcastAll;
-			
 			gameObject = null;
 			reference = null;
 			sendEvent = null;

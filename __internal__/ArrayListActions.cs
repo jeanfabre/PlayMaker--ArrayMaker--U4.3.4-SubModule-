@@ -1,5 +1,5 @@
-//	(c) Jean Fabre, 2011-2013 All rights reserved.
-//	http://www.fabrejean.net
+//	(c) Jean Fabre, 2011-2018
+
 
 // This is the arrayList abstract class in between actual actions and the CollectionsAction root for all actions related to ArrayList
 

@@ -1,7 +1,6 @@
-//	(c) Jean Fabre, 2011-2015 All rights reserved.
-//	http://www.fabrejean.net
+//	(c) Jean Fabre, 2011-2018
 
-//using UnityEditor;
+
 using UnityEngine;
 using HutongGames.PlayMaker;
 using System.Collections;

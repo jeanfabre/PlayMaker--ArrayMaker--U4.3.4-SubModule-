@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.2.0
+**Release Date:** 15/01/2018  
+
+**Fix** 
+- Fixed scene not marked as dirty when editing proxy
+
 ###1.1.9
 **Release Date:** 23/10/2017  
 

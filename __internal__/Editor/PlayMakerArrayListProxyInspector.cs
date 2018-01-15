@@ -1,6 +1,4 @@
-//	(c) Jean Fabre, 2011-2013 All rights reserved.
-//	http://www.fabrejean.net
-
+//	(c) Jean Fabre, 2011-2018
 
 using UnityEditor;
 using UnityEngine;
@@ -45,6 +43,9 @@ public class PlayMakerArrayListProxyInspector : PlayMakerCollectionProxyInspecto
 		if (GUI.changed)
 		{
             EditorUtility.SetDirty(proxy);
+			#if UNITY_5_3_OR_NEWER
+			EditorSceneManager.MarkSceneDirty(proxy.gameObject.scene);
+			#endif
 		}
 	}// OnInspectorGUI
 	

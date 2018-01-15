@@ -1,8 +1,9 @@
-(c) Jean Fabre, 2011-2015 All rights reserved.
+(c) Jean Fabre, 2011-2018
+
 This package is released under LGPL license: http://opensource.org/licenses/LGPL-3.0.
 This content is released under the (http://opensource.org/licenses/MIT) MIT License.
-http://www.fabrejean.net
-contact: http://www.fabrejean.net/contact.htm
+
+contact: http://hutonggames.com/playmakerforum/index.php?action=profile;u=33
 
 
 DESCRIPTION:
@@ -31,36 +32,3 @@ INSTALLATION:
  
 To install ArrayMaker Addon for PlayMaker unpack the unitypackage.
 To see sample scenes, import the included ArrayMakerSamples.unitypackage.	
-
-
-KNOWN ISSUES:
-	
-		
-TOASK ALEX:
-	* Is it possible to gain access even via raw commandline to the help generator to document each actions on the wiki ( pretty please :) )
-	* I used the same font for the "arrayMaker" logo. Is that acceptable? I am ok to change it of course, I just messed with it and had this idea since "a" "y" and "r was available in your logo :)
-	
-TOASK :
-	* when getting an item from list, should it convert automatically and if possible to the type set in the get value?
-		ie: arrayList[2] contains a int. If the arrayListGet is set to retrieve a string, should I convert? maybe have an explicit flag to allow for this?
-	* Actions are implemented in a strict manner, that is HashTableAdd will not "set" instead if the key already exists. 
-	* Some actions have events such as Success, Found, NotFound. I need a clear and consistent behavior here, but unsettled about this. for example: if I expose a NoFound event ( exmaple ArraListRemove), should I expose a Found event as well or simply rely on the built in Finish event? I tend to think the more the better ( FOUND & NOTFOUND) but actions starts to be crowded with optionnal stuff, this could be misleading for beginners.
-	* should I use DEFINE in my proxies so that if the user doesn't have playmaker he can still benefit from my proxies ( cause they offers features not available with conventionnal arrays).
-	
-TOFIX:
-	* broadcast events to fsm from wrappers. Is it possible without a Fsm reference? it should I think. -> will implement with the new api when available
-	* how can I improve the hashTableActions and ArrayTableActions to avoid duplicate code just because the type is different, 
-	the routine is identical to get and check for a component on a gameObject.
-	* How PlayMaker LogError is working? I can't get anything, I have to use debug.LogError.
-	
-ROADMAP:
-	* more collections type if required
-	* more tools to build arrays during authoring and playback : add, insert, remove, remove at, and change type for each entry.
-	* possible specialties for GUI listing and stuff ( like drop down menu)
-
-Similar Addons down the line:
-	* XML Parser -> REST?
-	* json Parser ?
-	* CSV Parser ( definitly, with headers etc etc)
-	* rss parser?
-	* database bridge?

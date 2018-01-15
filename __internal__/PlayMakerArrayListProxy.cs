@@ -1,5 +1,4 @@
-//	(c) Jean Fabre, 2011-2013 All rights reserved.
-//	http://www.fabrejean.net
+//	(c) Jean Fabre, 2011-2018
 
 // INSTRUCTIONS
 // Drop this script onto a GameObject.

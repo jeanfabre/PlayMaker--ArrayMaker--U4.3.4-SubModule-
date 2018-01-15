@@ -1,7 +1,4 @@
-//	(c) Jean Fabre, 2011-2013 All rights reserved.
-//	http://www.fabrejean.net
-
-// This is the HashTable abstract class in between actual actions and the CollectionsAction root for all actions related to HashTable
+//	(c) Jean Fabre, 2011-2018
 
 using UnityEngine;
 using System.Collections;

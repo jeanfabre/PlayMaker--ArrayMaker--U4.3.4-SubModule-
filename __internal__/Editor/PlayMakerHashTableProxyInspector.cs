@@ -1,4 +1,4 @@
-//	(c) Jean Fabre, 2011-2015 All rights reserved.
+//	(c) Jean Fabre, 2011-2018
 
 using UnityEditor;
 using UnityEngine;
@@ -48,6 +48,9 @@ public class PlayMakerHashTableProxyInspector : PlayMakerCollectionProxyInspecto
 		if (GUI.changed)
 		{
             EditorUtility.SetDirty(proxy);
+			#if UNITY_5_3_OR_NEWER
+			EditorSceneManager.MarkSceneDirty(proxy.gameObject.scene);
+			#endif
 		}
 		
 	}// OnInspectorGUI

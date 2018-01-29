@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.2.1
+**Release Date:** 25/01/2018  
+
+**New** 
+- Scripting define symbol `ARRAYMAKER` in place
+
 ###1.2.0
 **Release Date:** 15/01/2018  
 

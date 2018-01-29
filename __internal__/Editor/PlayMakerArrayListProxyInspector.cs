@@ -7,6 +7,10 @@ using HutongGames.PlayMaker.Actions;
 using HutongGames.PlayMakerEditor;
 using System.Collections;
 
+#if UNITY_5_3_OR_NEWER
+using UnityEditor.SceneManagement;
+#endif
+
 [CustomEditor(typeof(PlayMakerArrayListProxy))]
 public class PlayMakerArrayListProxyInspector : PlayMakerCollectionProxyInspector
 {

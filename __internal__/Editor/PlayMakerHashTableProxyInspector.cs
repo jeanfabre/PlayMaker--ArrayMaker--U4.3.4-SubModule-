@@ -4,8 +4,10 @@ using UnityEditor;
 using UnityEngine;
 using HutongGames.PlayMaker;
 using HutongGames.PlayMaker.Actions;
-//using HutongGames.PlayMakerEditor;
 using System.Collections;
+#if UNITY_5_3_OR_NEWER
+using UnityEditor.SceneManagement;
+#endif
 
 [CustomEditor(typeof(PlayMakerHashTableProxy))]
 public class PlayMakerHashTableProxyInspector : PlayMakerCollectionProxyInspector

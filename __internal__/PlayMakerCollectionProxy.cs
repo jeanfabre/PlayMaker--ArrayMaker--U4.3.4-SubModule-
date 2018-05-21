@@ -103,7 +103,7 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 					Fsm.EventData.FloatData = (float)value;
 					break;
 				case ("gameObject"):
-					Fsm.EventData.ObjectData = (GameObject)value;
+					Fsm.EventData.GameObjectData = (GameObject)value;
 					break;
 				case ("int"):
 					Fsm.EventData.IntData = (int)value;

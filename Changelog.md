@@ -1,5 +1,15 @@
 #ArrayMaker Change log
 
+###1.2.3
+**Release Date:** 21/05/2018  
+
+**Fix:** fixed GameObject EventData with enableEvents 
+
+###1.2.2
+**Release Date:** 03/04/2018  
+
+**Update:** `PlayMaker Utils` update  
+
 ###1.2.1
 **Release Date:** 25/01/2018  
 

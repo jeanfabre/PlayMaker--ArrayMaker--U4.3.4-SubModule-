@@ -12,7 +12,7 @@ namespace HutongGames.PlayMaker.Actions
 		[ActionSection("Set up")]
 		
 		[RequiredField]
-		[Tooltip("The gameObject with the PlayMaker ArrayList Proxy component")]
+		[Tooltip("The gameObject with the PlayMaker ArrayListTable Proxy component")]
 		[CheckForComponent(typeof(ArrayListTable))]
 		public FsmOwnerDefault gameObject;
 
@@ -29,10 +29,10 @@ namespace HutongGames.PlayMaker.Actions
 		[Tooltip("The row index to retrieve the item from")]
 		public FsmInt atRowIndex;
 		
-		[ActionSection("Result")]
+		[ActionSection("Value")]
 		[RequiredField]
 		[UIHint(UIHint.Variable)]
-		public FsmVar result;
+		public FsmVar value;
 		
 		[UIHint(UIHint.FsmEvent)]
 		[Tooltip("The event to trigger if the action fails ( likely and index is out of range exception)")]
@@ -51,7 +51,7 @@ namespace HutongGames.PlayMaker.Actions
 			
 			failureEvent = null;
 			
-			result = null;
+			value = null;
 		}
 		
 		
@@ -112,7 +112,7 @@ namespace HutongGames.PlayMaker.Actions
 
 				if (atRowIndex.Value <0 || (atRowIndex.Value +1) > _at.ColumnData[atColumnIndex.Value].arrayList.Count)
 				{
-					_error = "Column index out of range";
+					_error = "Row index out of range";
 					throw new UnityException(_error+" for "+PlayMakerUtils.LogFullPathToAction(this));
 				}
 
@@ -130,7 +130,7 @@ namespace HutongGames.PlayMaker.Actions
 				return;
 			}
 			
-			PlayMakerUtils.ApplyValueToFsmVar(Fsm,result,element);
+			PlayMakerUtils.ApplyValueToFsmVar(Fsm,value,element);
 		}
 	}
 }

@@ -12,7 +12,7 @@ namespace HutongGames.PlayMaker.Actions
 		[ActionSection("Set up")]
 		
 		[RequiredField]
-		[Tooltip("The gameObject with the PlayMaker ArrayList Proxy component")]
+		[Tooltip("The gameObject with the PlayMaker ArrayListTable Proxy component")]
 		[CheckForComponent(typeof(ArrayListTable))]
 		public FsmOwnerDefault gameObject;
 
@@ -58,14 +58,14 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public override void OnEnter()
 		{
-			GetItemAtIndex();
+			SetItemAtIndex();
 			
 			Finish();
 		}
 		
 		
 		
-		public void GetItemAtIndex(){
+		public void SetItemAtIndex(){
 			
 			if (!UpdateCache(Fsm.GetOwnerDefaultTarget(gameObject)))
 			{
@@ -113,7 +113,7 @@ namespace HutongGames.PlayMaker.Actions
 
 				if (atRowIndex.Value <0 || (atRowIndex.Value +1) > _at.ColumnData[atColumnIndex.Value].arrayList.Count)
 				{
-					_error = "Column index out of range";
+					_error = "Row index out of range";
 					throw new UnityException(_error+" for "+PlayMakerUtils.LogFullPathToAction(this));
 				}
 

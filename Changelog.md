@@ -1,5 +1,14 @@
 #ArrayMaker Change log
 
+###1.2.5
+**Release Date:** 05/09/2018  
+
+**Update:** `PlayMaker Utils` update  
+
+**New:** new action `ArrayListGetAllChildOfGameObject`  
+**New:** new action `ArrayTableSetItem`, `ArrayTableGetItem`, `ArrayTableGetRowToArrayList`, `ArrayTableGetRowToHashtable`
+
+
 ###1.2.4
 **Release Date:** 26/06/2018  
 

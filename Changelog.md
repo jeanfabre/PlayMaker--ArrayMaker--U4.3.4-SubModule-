@@ -1,6 +1,6 @@
 #ArrayMaker Change log
 
-###1.2.5
+###1.2.6
 **Release Date:** 18/09/2018  
 
 **Update:** `PlayMaker Utils` update  

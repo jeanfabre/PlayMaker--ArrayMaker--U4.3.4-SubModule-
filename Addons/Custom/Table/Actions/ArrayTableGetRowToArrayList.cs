@@ -58,11 +58,8 @@ namespace HutongGames.PlayMaker.Actions
 		
 		
 		
-		public void GetRowAtIndex(){
-
-			
-			object element = null;
-			
+		public void GetRowAtIndex()
+		{
 			
 			string _error = string.Empty;
 

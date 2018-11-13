@@ -76,8 +76,6 @@ namespace HutongGames.PlayMaker.Actions
 
 			ArrayListTable _at = this.cachedComponent as ArrayListTable;
 
-			object element = null;
-
 			int index =0;
 
 			string _error = string.Empty;

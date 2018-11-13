@@ -27,10 +27,6 @@ namespace HutongGames.PlayMaker.Actions
 		public FsmEvent failureEvent;
 
 		ArrayListTable _at;
-		
-		object _element = null;
-		
-		int _index =0;
 
 		string _error = string.Empty;
 

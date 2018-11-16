@@ -19,8 +19,8 @@ namespace HutongGames.PlayMaker.Actions
 		 FsmGameObject,FsmInt,FsmFloat,FsmString,FsmBool,FsmVector2,FsmVector3,FsmRect,FsmQuaternion,FsmColor,FsmMaterial,FsmTexture,FsmObject
 		}
 		
-		
-		protected PlayMakerHashTableProxy GetHashTableProxyPointer(GameObject aProxy,string nameReference,bool silent){
+
+		public static PlayMakerHashTableProxy GetHashTableProxyPointer(GameObject aProxy,string nameReference,bool silent){
 		
 			if (aProxy==null){
 				if (!silent) Debug.LogError("Null Proxy");
@@ -65,7 +65,7 @@ namespace HutongGames.PlayMaker.Actions
 		
 		
 		
-		protected PlayMakerArrayListProxy GetArrayListProxyPointer(GameObject aProxy,string nameReference,bool silent){
+		public static  PlayMakerArrayListProxy GetArrayListProxyPointer(GameObject aProxy,string nameReference,bool silent){
 					
 				if (aProxy==null){
 					if (!silent) Debug.LogError("Null Proxy");
@@ -87,7 +87,7 @@ namespace HutongGames.PlayMaker.Actions
 	   			 	}
 	
 					if (nameReference != ""){
-						if (!silent) LogError("ArrayList Proxy not found for reference <"+nameReference+">");
+					if (!silent) Debug.LogError("ArrayList Proxy not found for reference <"+nameReference+">");
 						return null;
 					}
 						
@@ -103,7 +103,7 @@ namespace HutongGames.PlayMaker.Actions
 				
 				if (!silent)
 				{
-					LogError("ArrayList proxy not found");
+					Debug.LogError("ArrayList proxy not found");
 				}
 				return null;
 			}// GetArrayListProxyPointer		

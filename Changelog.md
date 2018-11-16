@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+
+###1.2.7
+**Release Date:** 16/11/2018  
+
+**Update:** CollectionsActions now expose `GetHashTableProxyPointer` and `GetArrayListProxyPointer` for actions using different base but still needs to access arrayMaker proxies ( EasySave 3 Actions for example)
+
 ###1.2.6
 **Release Date:** 18/09/2018  
 

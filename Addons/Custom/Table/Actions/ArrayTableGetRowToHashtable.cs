@@ -60,7 +60,6 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public void GetRowAtIndex()
 		{
-
 			string _error = string.Empty;
 
 			try{

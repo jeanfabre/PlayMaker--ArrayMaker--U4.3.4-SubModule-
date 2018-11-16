@@ -65,8 +65,8 @@ namespace HutongGames.PlayMaker.Actions
 		
 		
 		
-		public void SetItemAtIndex(){
-			
+		public void SetItemAtIndex()
+		{
 			if (!UpdateCache(Fsm.GetOwnerDefaultTarget(gameObject)))
 			{
 				Debug.Log("ArrayListTable not found for "+PlayMakerUtils.LogFullPathToAction(this));

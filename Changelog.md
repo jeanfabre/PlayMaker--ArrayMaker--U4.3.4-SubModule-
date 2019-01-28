@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.2.9
+**Release Date:** 28/01/2019  
+
+**Fix:** fixed editor time scene dirty flag to prevent benine error.
+
+**New:** new action `ArrayListGetChildrenOfGameObject`
 
 ###1.2.8
 **Release Date:** 16/11/2018  

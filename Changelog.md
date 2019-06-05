@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.3.1
+**Release Date:** 05/06/2019  
+
+**New:** new action `ArrayListGetRandomCurvedWeighted`
+
+**Update:** `PlayMaker Utils` update  
 
 ###1.3
 **Release Date:** 29/03/2019  

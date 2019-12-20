@@ -1,5 +1,19 @@
 #ArrayMaker Change log
 
+###1.3.3
+**Release Date:** 18/10/2019  
+
+**New:** new action `ArrayListSendStringEventToGameObjects`
+
+**Update:** `ArrayListIsEmpty` now features an every frame option  
+
+###1.3.2
+**Release Date:** 08/10/2019  
+
+**Fix:**  `ArrayListGetScreenResolutions` now remove duplicates
+
+**Update:** `PlayMaker Utils` update  
+
 ###1.3.1
 **Release Date:** 05/06/2019  
 

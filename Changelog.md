@@ -1,5 +1,15 @@
 #ArrayMaker Change log
 
+###1.3.5
+**Release Date:** 03/02/2020 
+
+**Fix:** `ArrayTableSetItem` and `ArrayTableGetItem` custom inspector fixed.
+
+###1.3.4
+**Release Date:** 20/12/2019  
+
+**Update:** `ArrayListGetScreenResolution` now features an option  to ignore refresh rate value
+
 ###1.3.3
 **Release Date:** 18/10/2019  
 

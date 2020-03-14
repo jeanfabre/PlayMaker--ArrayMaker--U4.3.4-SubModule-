@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.3.6
+**Release Date:** 14/03/2020  
+
+**New**: New action `ArrayListRaycastAll`  
+**New**: New action `ArrayListSendStringEventToGameObjects`  
+
 ###1.3.5
 **Release Date:** 03/02/2020 
 

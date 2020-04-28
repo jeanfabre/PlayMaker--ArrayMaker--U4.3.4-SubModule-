@@ -1,5 +1,10 @@
 #ArrayMaker Change log
 
+###1.3.7
+**Release Date:** 28/04/2020  
+
+**Update**: added better logs on errors 
+
 ###1.3.6
 **Release Date:** 14/03/2020  
 

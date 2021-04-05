@@ -5,6 +5,7 @@ using UnityEngine;
 using HutongGames.PlayMaker;
 using System.Collections;
 using System.Collections.Generic;
+using HutongGames.PlayMaker.Ecosystem.Utils;
 
 public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 	
@@ -45,7 +46,8 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 	public string addEvent;
 	public string setEvent;
 	public string removeEvent;
-
+	public bool localOnly = false;
+	
 	public int contentPreviewStartIndex = 0;
 	public int contentPreviewMaxRows = 10;
 	
@@ -139,14 +141,23 @@ public abstract class PlayMakerCollectionProxy : MonoBehaviour {
 			}
 		
 		FsmEventTarget eventTarget = new FsmEventTarget();
-		eventTarget.target = FsmEventTarget.EventTarget.BroadcastAll;
-		
-		var fsmList = new List<Fsm>(Fsm.FsmList);
-		if (fsmList.Count>0){
-			Fsm fsmOne = fsmList[0];
-			fsmOne.Event(eventTarget,anEvent);
+		if (localOnly)
+		{
+			PlayMakerUtils.SendEventToTarget(null,FsmEventTarget.Self,anEvent,null);
 		}
-			//foreach (var fsm in fsmList){fsm.Event(anEvent);}
+		else
+		{
+			eventTarget.target = FsmEventTarget.EventTarget.BroadcastAll;
+
+			var fsmList = new List<Fsm>(Fsm.FsmList);
+			if (fsmList.Count > 0)
+			{
+				Fsm fsmOne = fsmList[0];
+				fsmOne.Event(eventTarget, anEvent);
+			}
+		}
+
+		//foreach (var fsm in fsmList){fsm.Event(anEvent);}
 	}
 	
 	

@@ -84,6 +84,7 @@ public class PlayMakerArrayListProxyInspector : PlayMakerCollectionProxyInspecto
 				proxy.addEvent = EditorGUILayout.TextField(new GUIContent("Add Event", "Sent when an item is added. Event data filled with the item value"), proxy.addEvent);
 				proxy.setEvent = EditorGUILayout.TextField(new GUIContent("Set Event", "Sent when an item is changed. Event data filled with the index value"), proxy.setEvent);			
 				proxy.removeEvent = EditorGUILayout.TextField(new GUIContent("Remove Event", "Sent when an item is removed. Event data filled with the item value"), proxy.removeEvent);
+				proxy.localOnly = EditorGUILayout.Toggle(new GUIContent("Local Only", "Sends to the gameobject if true, else Broadcast events"),proxy.localOnly);
 			}
 			EditorGUI.indentLevel = 0;
 		}

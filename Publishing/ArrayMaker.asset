@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ec061b5ce3f6849bc6ee6497489ccb, type: 3}
+  m_Name: ArrayMaker
+  m_EditorClassIdentifier: 
+  includeFolders:
+  - f73d2f7906c4c4439b11131c53923814
+  - f879493851bbd463c86a11f4fa1439b9
+  excludeFolders:
+  - 17aa9e01ce8674e88b4ceb9c17184d86
+  includeFiles: []
+  excludeFiles: []
+  youTubeLists:
+  - https://www.youtube.com/watch?v=6SBuH1vxC7A&list=PL1EwQda_5HM_n8MEaBGfcXLNpmL8qBqV1
+  webLinkList:
+  - https://hutonggames.fogbugz.com/?W715
+  modulesList: []
+  ecoFilterList: []
+  foldersToInclude: []
+  filesToInclude: []
+  foldersToExclude: []
+  filesToExclude: []
+  author: Jean Fabre
+  type: Addon
+  version: 1.4
+  keyWords: List Array Hashtable dictionnary data database
+  packageName: ArrayMaker
+  targetDirectory: /Users/jeanfabre/Documents/Work/PlayMaker/Ecosystem/Repositories/PlayMakerCustomActions_U2018/PlayMaker/Ecosystem/Custom
+    Packages/ArrayMaker
+  targetRepository: 7
+  categoryString: ArrayMaker
+  targetPackageTextFile: /Users/jeanfabre/Documents/Work/PlayMaker/Ecosystem/Repositories/PlayMakerCustomActions_U2018/PlayMaker/Ecosystem/Custom
+    Packages/ArrayMaker/ArrayMaker.package.txt
+  packagetypeselection:
+  - ActionPackage
+  - SamplePackage
+  - TemplatePackage
+  packagetypeselected: 0
+  UminVselection:
+  - ActionPackage
+  - SamplePackage
+  - TemplatePackage
+  UminVselected: 0
+  PMminVselection:
+  - ActionPackage
+  - SamplePackage
+  - TemplatePackage
+  PMminVselected: 0
+  Pingtype:
+  - None
+  - Asset Path
+  - Menu
+  Pingtypeselected: 1
+  uMinVersionSelected: 12
+  pmMinVersionSelected: 7
+  categoryList:
+  - API
+  - Analytics
+  - AnimateVariables
+  - Animation
+  - Android
+  - Animator
+  - Application
+  - Array
+  - AssetBundle
+  - Audio
+  - AudioMixer
+  - BlendShapes
+  - Camera
+  - Color
+  - Convert
+  - CrossPlatformInput
+  - Debug
+  - Device
+  - Editor
+  - Effects
+  - Encryption
+  - Files
+  - FOV
+  - GarbageCollection
+  - GameObject
+  - GUI
+  - GuiElement
+  - GUILayout
+  - Input
+  - JSON
+  - Level
+  - Lights
+  - Logic
+  - Material
+  - Math
+  - Mesh
+  - Microphone
+  - MobileGameController
+  - Movement
+  - NavMeshAgent
+  - NoiseModule
+  - Particles
+  - Physics
+  - Physics2D
+  - PlayerPrefs
+  - QualitySettings
+  - Quaternion
+  - Rect
+  - RectTransform
+  - RenderSettings
+  - Renderer
+  - Resources
+  - Screen
+  - ScriptControl
+  - ShapeModule
+  - Social
+  - Sprite
+  - StateMachine
+  - String
+  - Texture
+  - Time
+  - Transform
+  - Trigonometry
+  - UnityAds
+  - UnityObject
+  - Vector2
+  - Vector3
+  - VideoClip
+  - VideoPlayer
+  - VR
+  - Web
+  - WebCam
+  - uGui
+  categorySelected: 0
+  assetPath: {fileID: 4900000, guid: a81fd0669f5f942d3b31e0cd3c12ff8e, type: 3}
+  pingMenu: {fileID: 0}
+  fileExistsCheck: 1
+  expandedList: 0
+  showList: 1
+  showSetFoldersAndFiles: 1
+  foldout: 1

@@ -1,5 +1,12 @@
 #ArrayMaker Change log
 
+###1.4
+**Release Date:** 27/07/2020  
+
+**Update**: updated to unity 2018 LTS
+
+**Update**: added local only option for sending events within arrylist proxy
+
 ###1.3.7
 **Release Date:** 28/04/2020  
 

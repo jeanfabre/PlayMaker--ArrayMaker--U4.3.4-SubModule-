@@ -1,4 +1,4 @@
-//	(c) Jean Fabre, 2011-2013 All rights reserved.
+//	(c) Jean Fabre, 2011-2021 All rights reserved.
 //	http://www.fabrejean.net
 
 // INSTRUCTIONS
@@ -25,6 +25,7 @@ namespace HutongGames.PlayMaker.Actions
 		public FsmString reference;
 		
 		[RequiredField]
+		[NoErrorCheck]
 		[Tooltip("The event to send. NOTE: Events must be marked Global to send between FSMs.")]
 		public FsmEvent sendEvent;
 		

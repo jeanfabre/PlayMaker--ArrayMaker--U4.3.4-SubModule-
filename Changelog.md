@@ -1,5 +1,11 @@
 #ArrayMaker Change log
 
+###1.4.1
+**Release Date:** 05/04/2021
+
+**Fix**: added NoErrorCheck attribute for action `ArrayListSendEventToGameObjects`
+
+
 ###1.4
 **Release Date:** 27/07/2020  
 

@@ -1,5 +1,7 @@
 (c) Jean Fabre, 2011-2018
 
+[![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)]()
+
 This package is released under LGPL license: http://opensource.org/licenses/LGPL-3.0.
 This content is released under the (http://opensource.org/licenses/MIT) MIT License.
 

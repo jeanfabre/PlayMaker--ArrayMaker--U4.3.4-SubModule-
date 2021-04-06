@@ -1,4 +1,4 @@
-(c) Jean Fabre, 2011-2018
+(c) Copyright HutongGames, LLC 2010-2021. All rights reserved.
 
 [![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)](https://hutonggames.com/)
 
